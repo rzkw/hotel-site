@@ -1,0 +1,427 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    
+}
+
+.bodyText {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    /* border-radius: purple 1px solid; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 14px;
+    font-size: 1em;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+header,
+main,
+footer {
+    /* max-width: 894px; */
+    margin: 0 auto;
+    width: 100%;
+    
+    
+}
+
+.sectionTitle {
+    font-size: 2.5em;
+}
+
+.mediumText2 {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+p {
+    font-size: 1.05em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+nav {
+    /* border: purple 1px solid; */
+    display: flex;
+    align-items: center;   
+    gap: 32px;
+    width: 100%;
+    justify-content: space-between;
+
+
+}
+
+nav h1 {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-size: 2.5em;
+    font-style: italic;
+}
+      
+nav div {
+    /* border: purple 1px solid; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+nav a {
+    display: flex;
+    align-items: center;   
+    /* justify-content: space-between; */
+    gap: 30px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+a {
+    color: black;
+
+}
+
+nav button {
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    /* color: white; */
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    animation: none;
+}
+
+/* .navContainer {
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+} */
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 64px;
+    /* border: rgb(221, 255, 2) solid 1px; */
+    gap: 20px;
+    align-items: center;
+}
+
+/* section {
+    border: purple solid 1px;
+    
+} */
+
+.box {
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 100%; */
+    /* max-height: 400px; */
+    /* max-width: 100%; */
+    /* border: purple solid 1px; */
+}
+
+
+.imgContainer {
+    /* border: purple solid 1px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    max-width: 100%;
+    height: 740px;
+    /* overflow: visible; */
+    
+
+}
+
+.imgContainer img {
+    /* border: purple solid 1px; */
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+
+}
+
+/* 
+.CtA {
+    color: white;
+    font-weight: 300;
+} */
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+    /* border: purple solid 1px; */
+    position: absolute;
+    top: 18%; /* when pos is absolute, top = distance between element's outer margin of top edge & inner border of top edge of its containing block */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.caption span {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-size: 3em;
+    font-style: italic;
+}
+
+.caption p {
+    font-size: 20px;
+    font-style: normal;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 90%; /* when pos is absolute, top = distance between element's outer margin of top edge & inner border of top edge of its containing block */
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.bgCard {
+    background-color: white;
+    border-radius: 30px;
+    width: 80%; /* Ensures it spans full width of container */
+    /* max-width: 800px; Limits max width of card */
+    margin: 0 auto; /* Centers card horizontally */
+    padding: 20px; /* Adds space in card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: absolute;
+    top: 60%; /* when pos is absolute, top = distance between element's outer margin of top edge & inner border of top edge of its containing block */
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align-items: center; */
+    padding-left: 20px;
+    gap: 40px;
+ 
+}
+
+/* .container1 div {
+    border: yellowgreen 1px solid;
+
+} */
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+.container1 a {
+    text-decoration: none;
+}
+
+.container2 .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* grid-row: 1; */
+    /* grid-template-rows: 200px; */
+    column-gap: 20px;
+    justify-items: center;
+    margin-top: 40px;
+    width: 100%;
+
+    
+}
+
+.container2 label {
+    font-weight: 500;
+}
+
+.container2 input {
+    padding: 12px 20px;
+    text-align: center;
+    justify-items:auto;
+    border: lightgrey 1px solid;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.input-icons i {
+    position: absolute;
+    padding: 10px 20px 0px 5px;
+    /* text-align: center; */
+    color: #aaa;
+}
+
+
+.container2 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding: 12px 20px;
+    height: 40px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    gap: 8px;
+    color: black;
+}
+
+.featProperties {
+    /* border: purple 1px solid; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.featProperties .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    width: 100%;
+    column-gap: 20px;
+}
+
+.featPropertiesText {
+    /* border: purple 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.featPropertiesCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: purple 1px solid; */
+    background-color: white;
+    border-radius: 10px;
+    /* height: 380px;
+    width: 300px;  */
+    /* max-width: 800px; Limits max width of card */
+    /* margin: 0 auto; Centers card horizontally */
+    padding: 15px; /* Adds space in card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.cardImg img {
+    /* border: purple 1px solid; */
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+
+
+}
+
+.cardText {
+    /* border: purple 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.cardContainerRow {
+    /* border: purple 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 40px; */
+    width: 100%;
+
+}
+
+.cardContainerRow div {
+    display: flex;
+    gap: 8px;
+    /* border: yellowgreen 1px solid; */
+    align-items: center;
+
+
+
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.boldText {
+    font-weight: 600;
+}
+
+.flexContainer div {
+    /* border: yellowgreen 1px solid; */
+}
+
+.flexContainer i {
+    padding-right: 8px;
+}
+
+
+@media (min-width: 768px) {
+    .container2 .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    /* .container1 {
+        gap: 10px;
+    } */
+}
+
+/*
+@media (min-width:1024px) {
+     fill for featured properties grid, 4 column 
+} */
+/*
+@media (min-width:640px) {
+     fill for featured properties grid, 2 column 
+} */
