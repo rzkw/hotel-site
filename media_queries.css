@@ -1,0 +1,125 @@
+/* Mobile-specific improvements */
+@media only screen and (max-width: 640px) {
+    .body {
+        gap: 30px;
+        padding: 12px;
+    }
+
+    /* Fix header navigation */
+    header {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    nav {
+        gap: 24px;
+    }
+    
+    /* Adjust typography for mobile */
+    .nameContainer {
+        font-size: 28pt;
+        text-align: center;
+    }
+
+    .underHeadline {
+        font-size: 20pt;
+        text-align: center;
+    }
+
+    /* Fix container layout */
+    .Container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: -100px;
+        gap: 20px;
+    }
+
+    .aboutMe {
+        text-align: center;
+        line-height: 1.6em;
+    }
+
+    /* Stack project items vertically */
+    .projectItem {
+        flex-direction: column;
+        gap: 16px;
+    }   
+
+    .projectItem > div:last-child {
+        max-width: 100%;
+        order: -1; /* Show image above text */
+    }
+
+    .imgContainer {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    /* Adjust decor circles */
+    .circle-1 {
+        width: 250px;
+        height: 220px;
+        translate: -20% -70%;
+    }
+
+    .circle-2 {
+        width: 250px;
+        height: 220px;
+        translate: 90%;
+    }
+
+    /* Fix outreach section */
+    .outreach {
+        padding-top: 15%;
+    }
+}
+
+/* Small tablets, large phones */
+@media only screen and (min-width:480px) {
+    .nameContainer {
+        font-size: 40pt;
+    }
+
+    .underHeadline {
+        font-size: 32pt;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .Container {
+        margin-top: -150px;
+    }
+
+    .projectItem {
+        gap: 32px;
+    }
+
+    .projectItem > div:last-child {
+        max-width: 35%;
+    }
+}
+
+/* Small laptops */
+@media only screen and (min-width: 1024px) {
+    main {
+        gap: 64px;
+        padding-top: 80px;
+    }
+
+    .projectContainer {
+        gap: 56px;
+    }
+
+}
+
+/* Large screens */
+@media only screen and (min-width: 1200px) {
+    header, main, footer {
+        max-width: 1000px;
+    }
+}

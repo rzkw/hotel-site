@@ -1,7 +1,16 @@
+:root {
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --container-max-width: 1200px;
+
+}
+
 * {
     padding: 0;
     box-sizing: border-box;
-    /* font-family: sans-serif; */
     
 }
 
@@ -12,7 +21,6 @@
 }
 
 body {
-    /* border-radius: purple 1px solid; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,7 +36,6 @@ body {
 header,
 main,
 footer {
-    /* max-width: 894px; */
     margin: 0 auto;
     width: 100%;
     
@@ -36,11 +43,11 @@ footer {
 }
 
 .sectionTitle {
-    font-size: 2.5em;
+    font-size: clamp(2rem, 5vw, 2.5rem);
 }
 
 .mediumText2 {
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 200;
 }
 
@@ -55,9 +62,9 @@ header {
 }
 
 nav {
-    /* border: purple 1px solid; */
     display: flex;
     align-items: center;   
+    padding: 0 1rem;
     gap: 32px;
     width: 100%;
     justify-content: space-between;
@@ -73,7 +80,6 @@ nav h1 {
 }
       
 nav div {
-    /* border: purple 1px solid; */
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -83,7 +89,6 @@ nav div {
 nav a {
     display: flex;
     align-items: center;   
-    /* justify-content: space-between; */
     gap: 30px;
     cursor: pointer;
     text-decoration: none;
@@ -100,47 +105,30 @@ nav button {
     border: none;
     border-radius: 10px;
     color: white;
-    /* color: white; */
     padding: 0.5rem 1rem;
     font-size: 1em;
     animation: none;
 }
 
-/* .navContainer {
-    gap: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-} */
 
 main {
     display: flex;
     flex-direction: column;
     padding-bottom: 64px;
-    /* border: rgb(221, 255, 2) solid 1px; */
     gap: 20px;
     align-items: center;
 }
 
-/* section {
-    border: purple solid 1px;
     
-} */
 
 .box {
     position: relative;
     display: flex;
-    /* flex-direction: column; */
-    /* width: 100%; */
-    /* max-height: 400px; */
-    /* max-width: 100%; */
-    /* border: purple solid 1px; */
 }
 
 
 .imgContainer {
-    /* border: purple solid 1px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,13 +137,11 @@ main {
     position: relative;
     max-width: 100%;
     height: 740px;
-    /* overflow: visible; */
     
 
 }
 
 .imgContainer img {
-    /* border: purple solid 1px; */
     height: 100%;
     width: 100%;
     aspect-ratio: 16/9;
@@ -163,11 +149,6 @@ main {
 
 }
 
-/* 
-.CtA {
-    color: white;
-    font-weight: 300;
-} */
 
 .caption {
     display: flex;
@@ -175,30 +156,26 @@ main {
     align-items: center;
     width: 100%;
     color: hsl(0, 0%, 100%);
-    /* border: purple solid 1px; */
     position: absolute;
     top: 18%; /* when pos is absolute, top = distance between element's outer margin of top edge & inner border of top edge of its containing block */
     left: 50%;
     transform: translate(-50%, -50%);
+    gap: 1rem;
 }
 
 .caption span {
     font-family: "DM Serif Text", serif;
     font-weight: 400;
-    font-size: 3em;
+    font-size: clamp(1.5rem, 4vw, 3rem); /* responsive font sizing */
     font-style: italic;
 }
 
 .caption p {
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-style: normal;
-    position: absolute;
     text-align: center;
-    width: 100%;
-    position: absolute;
-    top: 90%; /* when pos is absolute, top = distance between element's outer margin of top edge & inner border of top edge of its containing block */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 90%;
+    line-height: 1.5;
 
 }
 
@@ -206,7 +183,6 @@ main {
     background-color: white;
     border-radius: 30px;
     width: 80%; /* Ensures it spans full width of container */
-    /* max-width: 800px; Limits max width of card */
     margin: 0 auto; /* Centers card horizontally */
     padding: 20px; /* Adds space in card */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -227,10 +203,7 @@ main {
  
 }
 
-/* .container1 div {
-    border: yellowgreen 1px solid;
 
-} */
 
 .container2 {
     display: flex;
@@ -248,8 +221,6 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    /* grid-row: 1; */
-    /* grid-template-rows: 200px; */
     column-gap: 20px;
     justify-items: center;
     margin-top: 40px;
@@ -281,7 +252,6 @@ main {
 .input-icons i {
     position: absolute;
     padding: 10px 20px 0px 5px;
-    /* text-align: center; */
     color: #aaa;
 }
 
@@ -304,7 +274,6 @@ main {
 }
 
 .featProperties {
-    /* border: purple 1px solid; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -314,13 +283,12 @@ main {
 
 .featProperties .grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-columns: 1fr;
     width: 100%;
-    column-gap: 20px;
+    gap: 20px;
 }
 
 .featPropertiesText {
-    /* border: purple 1px solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,20 +298,20 @@ main {
 .featPropertiesCard {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /* border: purple 1px solid; */
+    gap: var(--space-sm);
     background-color: white;
     border-radius: 10px;
-    /* height: 380px;
-    width: 300px;  */
-    /* max-width: 800px; Limits max width of card */
-    /* margin: 0 auto; Centers card horizontally */
-    padding: 15px; /* Adds space in card */
+    padding: var(--space-sm);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featPropertiesCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px, rgba(0, 0, 0, 0.15);
 }
 
 .cardImg img {
-    /* border: purple 1px solid; */
     height: 100%;
     width: 100%;
     aspect-ratio: 16/9;
@@ -353,7 +321,6 @@ main {
 }
 
 .cardText {
-    /* border: purple 1px solid; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -364,11 +331,9 @@ main {
 }
 
 .cardContainerRow {
-    /* border: purple 1px solid; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 40px; */
     width: 100%;
 
 }
@@ -376,7 +341,6 @@ main {
 .cardContainerRow div {
     display: flex;
     gap: 8px;
-    /* border: yellowgreen 1px solid; */
     align-items: center;
 
 
@@ -398,10 +362,6 @@ main {
     font-weight: 600;
 }
 
-.flexContainer div {
-    /* border: yellowgreen 1px solid; */
-}
-
 .flexContainer i {
     padding-right: 8px;
 }
@@ -412,16 +372,81 @@ main {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    /* .container1 {
-        gap: 10px;
-    } */
 }
 
-/*
-@media (min-width:1024px) {
-     fill for featured properties grid, 4 column 
-} */
-/*
-@media (min-width:640px) {
-     fill for featured properties grid, 2 column 
-} */
+/* Mobile */
+@media only screen and (max-width:640px) {
+    .container1 {
+        flex-wrap: wrap; /* Allows "stays", "flights" links to wrap onto new line if needed */
+        justify-content: center; /* Centers links when they wrap */
+    }
+
+    .container2 .grid {
+        grid-template-columns: 1fr; /* Changes grid from 4 columsn to 1 */
+        row-gap: 20px; /* Adds space between stacked input fields */
+    }
+
+    .bgCard {
+        width: 90%;
+        top: 80%;
+    }
+
+    .caption {
+        padding: 20px;
+    }
+    .caption span {
+        font-size: 1.5em;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .caption p {
+        font-size: 1em;
+        width: 98%;
+    }
+
+    nav {
+        flex-wrap: wrap; /* Allows two main divs in nav to stack */
+        justify-content: center; /* Center nav content when it stacks */
+        gap: 20px; /* Adjust spacing for wrapped layout */
+    }
+
+    nav h1 {
+        font-size: 2em; /* Slightly reduce logo font size */
+    }
+
+    .featProperties .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small tablets, large phones */
+@media only screen and (min-width:480px) {
+
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+    .container2 .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+}
+
+/* Small laptops */
+@media only screen and (min-width: 1024px) {
+        .featProperties .grid {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+}
+
+/* Large screens */
+@media only screen and (min-width: 1200px) {
+    .featProperties .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
